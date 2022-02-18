@@ -9,10 +9,10 @@
   },
   "author": "",
   "license": "MIT",
-  "dependencies": {
-    "pupeteer": "^0.0.1"
-  },
   "devDependencies": {
     "typescript": "^4.5.5"
+  },
+  "dependencies": {
+    "puppeteer": "^13.3.2"
   }
 }

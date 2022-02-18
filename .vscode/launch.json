@@ -8,13 +8,10 @@
             "type": "pwa-node",
             "request": "launch",
             "name": "Launch Program",
-            "skipFiles": [
-                "<node_internals>/**"
-            ],
-            "program": "${workspaceFolder}\\src\\index.ts",
-            "outFiles": [
-                "${workspaceFolder}/**/*.js"
-            ]
+            "preLaunchTask": "${defaultBuildTask}",
+            "skipFiles": ["<node_internals>/**"],
+            "program": "${workspaceFolder}\\dist\\index.js",
+            "outFiles": ["${workspaceFolder}/**/*.js"]
         }
     ]
 }
