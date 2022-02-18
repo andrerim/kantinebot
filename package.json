@@ -1,0 +1,18 @@
+{
+  "name": "kantinebot",
+  "version": "1.0.0",
+  "description": "Scrape the kantine menu",
+  "main": "index.ts",
+  "scripts": {
+    "build": "tsc -p . -w",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "pupeteer": "^0.0.1"
+  },
+  "devDependencies": {
+    "typescript": "^4.5.5"
+  }
+}
