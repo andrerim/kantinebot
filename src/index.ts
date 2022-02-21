@@ -7,12 +7,16 @@ async function scrapeData() {
     await page.goto(kantineUrl);
     await page.waitForSelector(`div[data-contents="true"]`);
     //await page.screenshot({ path: "menu.png" });
-    const r = await page.$$(`span[data-text="true"]`);
-    for (const el of r) {
-        console.log((await el.getProperty("innerHTML")).toString());
+    const menuPage = await page.$$(`span[data-text="true"]`);
+    let menuItems = [];
+    for (const menuItem of menuPage) {
+        const item = await menuItem.getProperty("innerText");
+        menuItems.push(await item.jsonValue());
     }
     await browser.close();
-    console.log("finished");
+    return menuItems;
 }
 
-scrapeData();
+scrapeData()
+    .then(console.log)
+    .then(() => console.log("Finished"));
